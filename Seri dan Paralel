@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+//LATIHAN SEBELUM UAS (Function Menghitung Hambatan Seri dan Paralel) 16/06/2020 MUHAMMAD REZEKI 
+
+void cetakInfo ()
+{
+	cout << "Menghitung Nilai Hambatan Seri dan Paralel" << endl;
+	cout << "Note : Masukan  nilai R1 , nilai R2 , nilai R3 pada perhitungan hambatan " <<endl;
+	cout << endl;
+}
+//*********************************************************************************************************
+double hambatanSeri(double hambatan1 , double hambatan2 , double hambatan3 )
+{
+	return  hambatan1 + hambatan2 + hambatan3;
+	
+}
+//*********************************************************************************************************
+double hambatanParalel(double hambatan4 , double hambatan5 , double hambatan6 )
+{
+	return   1 / hambatan4 +  1 / hambatan5 +  1 / hambatan6;
+	
+}
+//*********************************************************************************************************
+int main ()
+{
+	cetakInfo ();
+	double hambatan1 , hambatan2 , hambatan3 , hambatan4 , hambatan5 , hambatan6 ;
+
+	cout << "Masukan nilai untuk perhitungan rangkaian Seri  : "<<endl;
+	cin >> hambatan1 >> hambatan2 >> hambatan3 ;
+	cout << endl;
+	cout << "Masukan nilai untuk perhitungan rangkaian Paralel : "<<endl;
+	cin >> hambatan4 >> hambatan5 >> hambatan6 ;
+//*********************************************************************************************************
+	cout << "Berikut adalah hasil dari perhitungan hambatan Seri : " <<endl << hambatanSeri(hambatan1 , hambatan2 , hambatan3);
+	cout << endl;
+	cout << "Berikut adalah hasil dari perhitungan hambatan Paralel : " <<endl << hambatanParalel(hambatan4 , hambatan5 , hambatan6);
+	return 0;
+}
